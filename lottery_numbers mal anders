@@ -1,0 +1,61 @@
+#Required test Unit
+require 'test/unit'
+
+class Array
+	def lottery_numbers
+		$number = (1..49).to_a.sort{rand() -0.5}              # speißt ein array mit den Zahlen 1-49, bringt alle in eine random
+		$numbers = $number [0..5]                             # reihenfolge und behällt die ersten 6.
+		puts "\t#{$numbers}"                            
+		return $numbers
+	end
+while true
+	puts 
+	puts " Möchtest du die Lottozahlen sehen [Ja/Nein]?"
+	print "---: "
+	input = gets.chomp
+	if input.downcase == "ja"
+		[].lottery_numbers
+	elsif input.downcase == "nein" 
+		break
+	end
+end
+
+  def insertion_sort
+	puts "--------------------------------------"
+	puts "Ausgangs Array in random Reihenfolge: #{self}"
+    1.upto(length - 1) do |x|
+      value = self[x]
+      y = x - 1
+      while y >= 0 and self[y] > value
+        self[y+1] = self[y]
+        y -= 1
+      end
+      self[y+1] = value
+    end
+	puts "Ausgangs Array in geordneter Reihenfolge #{self}"
+	puts "--------------------------------------"
+	puts
+    self
+ 
+	end
+
+end
+
+puts
+puts
+puts "################   TEST   ################"
+puts 
+
+###########################################################################
+###################				TEST 			###########################
+###########################################################################
+
+$number.insertion_sort
+ 
+puts "Die 6 Zufallszahlen der Lotterie #{$numbers}"
+puts
+puts "--------------------------------------"
+puts 
+
+
+
