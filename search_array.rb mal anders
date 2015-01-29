@@ -1,0 +1,49 @@
+#Required test Unit
+require 'test/unit'
+
+class Array
+	def index_of(n)
+	array = self
+	a = []
+	x = 0
+		for i in 0..(array.length)
+			if array[i] == n
+				a[x] = i
+				x = x+1
+			end
+		end
+		if x == 0
+			a[0] = "Nill"
+		end
+		if a[0] != "Nill"
+			puts
+			puts "Der Wert '#{n}' kommt im Array #{array}, an Stelle #{a} vor."
+			puts
+		else 
+			puts
+			puts "Der Wert '#{n}' kommt im Array #{array} gar nicht vor."
+			puts	
+		end
+		return a
+	end
+end
+
+
+puts
+puts
+puts "################   TEST   ################"
+
+###########################################################################
+###################				TEST 			###########################
+###########################################################################
+class SearchArrayTest < Test::Unit::TestCase
+def test
+puts
+#test der index_of Methode
+assert_equal([2],[4,3,5].index_of(5))
+assert_equal([3],[6,5,3,8].index_of(8))
+assert_equal([1,3],[78, 12, 34, 12].index_of(12))
+assert_equal(["Nill"],[10,11,12,14].index_of(13))
+
+end
+end
