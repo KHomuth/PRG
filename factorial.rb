@@ -1,7 +1,7 @@
 class Integer
 	def factorial
 		if self==0
-		return 0
+		return 1
 		else
 			i=2
 			a=1
