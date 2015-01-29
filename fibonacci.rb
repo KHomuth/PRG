@@ -8,8 +8,7 @@ def fib lim
 				wert[0]=wert[0]+wert[1]	
 				a.push wert[0] 
 				wert[0],wert[1]=wert[1],wert[0]			
-		end	
-		a.push lim
+		end
 		return a
 	end
 end
@@ -28,7 +27,7 @@ end
 =begin
 aussagekräftige Testaufrufe
 	Bitte Obergrenze der Fibonacci Folge eingeben. Erwarte Eingabe:
-	89
+	90
 	1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89
 	
 	Bitte Obergrenze der Fibonacci Folge eingeben. Erwarte Eingabe:
