@@ -22,7 +22,7 @@ puts n.to_s + '! = ' + n.factorial.to_s
 aussagekräftige Testaufrufe
 	Bitte Integerzahl eingeben. Erwarte Eingabe:
 	0
-	0! = 0
+	0! = 1
 	
 	Bitte Integerzahl eingeben. Erwarte Eingabe:
 	1
